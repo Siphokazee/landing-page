@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Passion</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #151515, #000000);
+            font-family: Arial, sans-serif;
+            color: gray;
+        }
+
+        #header {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        #description {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        #starry-night {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        #starry-night img {
+            width: 80%;
+            max-width: 500px;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+
+        #learn-more {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #learn-more a {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background: #0f9d58;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #0f9d58;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+        }
+
+        #learn-more a:hover {
+            background: transparent;
+            color: #0f9d58;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>JavaScript is awesome</h1>
+        <h2><em>It is the cornerstone of web development</em></h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/JavaScript_code.png " alt="JavaScript_code" width="300">
+    </div>
+
+    <div id="description">
+        <p> JavaScript is seriously awesome! It's like the superhero of the web. Whether you want to make a webpage come alive with cool animations, build a snappy and interactive app, or even make a robot dance (yes, you can do that too!), JavaScript is the language that makes it all happen. It's the magic behind the buttons you click, the games you play, and the cat videos you can't stop watching. Plus, it's got a friendly community of developers who are always cooking up new tricks and sharing them with the world. So, if you're looking to dive into the world of coding, JavaScript is where the fun begins. Give it a shot, and you'll be amazed at what you can create! 🚀✨</p>
+    </div>
+
+    <div id="starry-night">
+
+
+    <div id="learn-more">
+        <p>Ready to start your web development journey?</p>
+        <a href="#" id="explore-button">Explore Now</a>
+    </div>
+
+    <script>
+        document.getElementById('explore-button').addEventListener('click', function () {
+            const name = prompt('What is your name?');
+            if (name) {
+                alert(`Hello, ${name}! Let's embark on a JavaScript adventure.`);
+            } else {
+                alert('No worries! Feel free to explore at your own pace.');
+            }
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
